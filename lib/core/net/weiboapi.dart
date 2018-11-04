@@ -1,4 +1,4 @@
-import 'package:aiweibo/core/config/privateconfig.dart';
+import 'package:aiweibo/core/config/privateconfig2.dart';
 
 ///
 /// WeiBo API 接口的封装
