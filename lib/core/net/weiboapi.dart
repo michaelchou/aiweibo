@@ -1,4 +1,4 @@
-import 'package:aiweibo/core/config/privateconfig2.dart';
+import 'package:aiweibo/core/config/privateconfig.dart';
 
 ///
 /// WeiBo API 接口的封装
@@ -14,12 +14,12 @@ abstract class WeiBoApi {
   // --请求用户授权Token
   // --接口：http://open.weibo.com/wiki/Oauth2/authorize
   static getAuthorize() =>
-      '${AUTH2_URL}authorize?client_id=${AppValue.APP_ID}&redirect_uri=https://www.baidu.com&response_type=code';
+      '${AUTH2_URL}authorize?client_id=${PConfig.APP_ID}&redirect_uri=https://www.baidu.com&response_type=code';
 
   // --获取授权过的Access Token
   // --接口地址：https://api.weibo.com/oauth2/access_token
   static getAuthAccessToken() =>
-      '${AUTH2_URL}access_token?client_id=${AppValue.APP_ID}&client_secret=${AppValue.APP_SECRET}&grant_type=authorization_code';
+      '${AUTH2_URL}access_token?client_id=${PConfig.APP_ID}&client_secret=${PConfig.APP_SECRET}&grant_type=authorization_code';
 
   /// 用户接口
   // --根据用户ID获取用户信息
